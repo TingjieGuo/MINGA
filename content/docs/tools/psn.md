@@ -27,7 +27,7 @@ brew install perl
 ```
 安装结束后，输入以下命令测试Perl是否安装成功：
 ```zsh
-perl -version
+perl -v
 ```
 正常的话会得到类似下面的返回信息:
 
@@ -47,19 +47,9 @@ Internet, point your browser at https://www.perl.org/, the Perl Home Page.
 #### 安装Perl模块
 PsN的功能依赖一些额外的Perl模块，我们需要事先把它们安装好。
 
-打开`Terminal.app`，依次执行以下命令：
+打开`Terminal.app`，执行以下命令：
 ```zsh
-sudo cpan Math::Random::Free
-sudo cpan Math::MatrixReal
-sudo cpan Mouse
-sudo cpan MouseX::Params::Validate
-sudo cpan Archive::Zip
-sudo cpan YAML
-sudo cpan Capture::Tiny
-sudo cpan File::Copy::Recursive
-sudo cpan File::HomeDir
-sudo cpan Math::SigFigs
-sudo cpan Statistics::Distributions
+sudo cpan Math::Random::Free Math::MatrixReal Mouse MouseX::Params::Validate Archive::Zip cpan YAML Capture::Tiny File::Copy::Recursive File::HomeDir Math::SigFigs Statistics::Distributions
 ```
 在此期间请保证网络连接状态，安装成功或失败会有明确的提示信息。
 
