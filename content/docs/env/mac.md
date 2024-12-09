@@ -82,26 +82,6 @@ gcc version 11.5.0 (Homebrew GCC 11.5.0)
 安装NONMEM需要`gcc-11`和`gfortran-11`这两个工具对代码进行编译，但NONMEM只能接受名为`gcc`和`gfortran`的命令（理论上可以改，但不太容易），所以我们仍然需要设置环境变量，手动将`gcc`和`gfortran`这两个命令指向`gcc-11`和`gfortran-11`。这里提供两种方法：
 
 {{% tabs %}}
-
-{{% tab "命令别名" %}}
-顾名思义，这个方法的原理是给`gcc-11`和`gfortran-11`添加别名，让我们在使用`gcc`和`gfortran`命令时其实是在调用`gcc-11`和`gfortran-11`。
-
-打开`Terminal.app`，输入以下命令：
-```zsh
-echo 'alias gcc="gcc-11"' >> ~/.zprofile
-echo 'alias gfortran="gfortran-11"' >> ~/.zprofile
-```
-然后重启`Terminal.app`，输入以下命令来确认设置是否成功：
-```zsh
-which gcc
-which gfortran
-```
-如果成功的话，返回内容应与下面类似:
-```zsh
-gcc: aliased to gcc-11
-gfortran: aliased to gfortran-11
-```
-{{% /tab %}}
 {{% tab "软链接" %}} 
 软链接本质类似于创建快捷方式，我们可以给`gcc-11`和`gfortran-11`这两个命令创建名为`gcc`和`gfortran`软链接从而实现执行后二者命令时执行`gcc-11`和`gfortran-11`。
 
@@ -123,9 +103,31 @@ which gfortran
 /usr/local/bin/gfortran
 ```
 {{% /tab %}}
-{{% /tabs %}}
 
-以上方法二选其一即可，至此NONMEM安装所需要的所有系统设置就都已经完成了。
+{{% tab "命令别名" %}}
+{{% hint danger %}}
+此方法并不总是有效，建议使用软链接。
+{{% /hint %}}
+顾名思义，这个方法的原理是给`gcc-11`和`gfortran-11`添加别名，让我们在使用`gcc`和`gfortran`命令时其实是在调用`gcc-11`和`gfortran-11`。
+
+打开`Terminal.app`，输入以下命令：
+```zsh
+echo 'alias gcc="gcc-11"' >> ~/.zprofile
+echo 'alias gfortran="gfortran-11"' >> ~/.zprofile
+```
+然后重启`Terminal.app`，输入以下命令来确认设置是否成功：
+```zsh
+which gcc
+which gfortran
+```
+如果成功的话，返回内容应与下面类似:
+```zsh
+gcc: aliased to gcc-11
+gfortran: aliased to gfortran-11
+```
+{{% /tab %}}
+
+{{% /tabs %}}
 
 ## 3. 关闭macOS“门禁”
 macOS有一套叫作“门禁”（Gatekeeper）的安全系统，用来检查用户想要运行的程序是否属于Apple认证的开发者。由于NONMEM安装程序未经过Apple认证，“门禁”系统会在NONMEM安装过程中触发，导致安装失败。我们接下来可以临时关闭这套系统。
