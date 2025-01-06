@@ -49,13 +49,14 @@ CLT虽然已经包含了很多开发工具，但我们的核心需求Fortran编�
 
 ## 2. 安装Fortran编译器
 NONMEM兼容的Fortran编译器只有GNU Fortran（GFortran）和Intel Fortran，前者开源。因此我们这里将使用Homebrew安装GFortran。GFortran有多个版本，但并非所有版本都能成功运行NONMEM，特别是在ARM架构的Mac电脑上，GFortran的最高版本不能超过11。截至2024年10月，以下配置已测试成功。
-|             设备                    | macOS 版本    | GFortran 版本       | NONMEM 版本     |
-|:-----------------------------------:|:------------:|:------------------:|:--------------:|
-| Macbook Pro (13-inch, M1, 2020)     |   Big Sur    |     10.2 (x86)     |     7.5.1      |
-| Macbook Pro (13-inch, M1, 2020)     |   Monterey   |     11.3 (ARM)     |     7.5.1      |
-| Macbook Pro (13-inch, M1, 2020)     |   Ventura    |     11.5 (ARM)     |     7.5.1      |
-| Macbook Pro (14-inch, M3 Pro, 2023) |   Sonoma     |     11.3 (x86)     |     7.5.1      |
-| Macbook Pro (14-inch, M3 Pro, 2023) |   Sequoia    |     11.5 (ARM)     |     7.5.1      |
+|            设备            | macOS 版本 | GFortran 版本 | NONMEM 版本 |
+| :------------------------: | :--------: | :-----------: | :---------: |
+|   Macbook Pro (M1, 2020)   |  Big Sur   |  10.2 (x86)   |    7.5.1    |
+|   Macbook Pro (M1, 2020)   |  Monterey  |  11.3 (ARM)   |    7.5.1    |
+|   Macbook Pro (M1, 2020)   |  Ventura   |  11.5 (ARM)   |    7.5.1    |
+| Macbook Pro (M3 Pro, 2023) |   Sonoma   |  11.3 (x86)   |    7.5.1    |
+| Macbook Pro (M3 Pro, 2023) |  Sequoia   |  11.5 (ARM)   |    7.5.1    |
+| Macbook Pro (M4 Pro, 2024) |  Sequoia   |  11.5 (ARM)   |    7.6.0    |
 
 我们可以在`Terminal.app`中执行以下命令，指定Homebrew安装GFortran 11：
 ```zsh
