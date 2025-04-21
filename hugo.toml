@@ -1,6 +1,6 @@
 # hugo server --minify --themesDir ../.. --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL = 'https://minga.tingjieguo.com/'
+baseURL = '/'
 title = 'MINGA'
 theme = 'hugo-book'
 
@@ -63,7 +63,7 @@ enableGitInfo = true
 
 [[menu.after]]
   name = '关于作者'
-  url = 'https://tingjieguo.com/about'
+  url = 'https://tingjie.me/about'
   weight = 10
 
 [params]
