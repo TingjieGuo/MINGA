@@ -1,37 +1,48 @@
+// Latin font
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+// Chinese font
 @import url(https://lxgw-bright-webfont.pages.dev/style.css);
 // @import url(https://cdn.jsdelivr.net/gh/tingjieguo/lxgw-bright-webfont/style.css);
 @import url(https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont/style.css);
 @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap');
 
-// @font-face {
-//   font-family: 'LXGW Wenkai';
-//   unicode-range: U+4E00-9FFF; // limit to Chinese characters only
-// }
+// Mono font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 body {
   font-family:
-    "Ysabeau Infant",
+    // Latin fonts
+    Ysabeau Infant,
+    Noto Sans,
+    // Chinese fonts
     "LXGW Bright GB",
-    "LXGW Wenkai",
-    "LXGW Wenkai TC",
+    "LXGW WenKai",
+    "LXGW WenKai TC",
+
+    // fallback fonts
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     Roboto,
     "Helvetica Neue",
     Arial,
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    "Noto Sans SC",
     sans-serif;
 }
 
 code {
   font-family:
-    'Roboto Mono',
+    "Noto Sans Mono",
+    "Roboto Mono",
     SFMono-Regular,
-    Consolas,
-    'Liberation Mono',
+    "Liberation Mono",
     Menlo,
+    Consolas,
     monospace;
 }
